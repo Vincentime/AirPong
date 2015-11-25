@@ -1,0 +1,8 @@
+c:\users\vince\documents\visual studio 2012\Projects\Projet_Techno\Projet_Techno\obj\Debug\Projet_Techno.csprojResolveAssemblyReference.cache
+c:\users\vince\documents\visual studio 2012\Projects\Projet_Techno\Projet_Techno\obj\Debug\Projet_Techno.Form1.resources
+c:\users\vince\documents\visual studio 2012\Projects\Projet_Techno\Projet_Techno\obj\Debug\Projet_Techno.Properties.Resources.resources
+c:\users\vince\documents\visual studio 2012\Projects\Projet_Techno\Projet_Techno\obj\Debug\Projet_Techno.csproj.GenerateResource.Cache
+c:\users\vince\documents\visual studio 2012\Projects\Projet_Techno\Projet_Techno\bin\Debug\Projet_Techno.exe
+c:\users\vince\documents\visual studio 2012\Projects\Projet_Techno\Projet_Techno\bin\Debug\Projet_Techno.pdb
+c:\users\vince\documents\visual studio 2012\Projects\Projet_Techno\Projet_Techno\obj\Debug\Projet_Techno.exe
+c:\users\vince\documents\visual studio 2012\Projects\Projet_Techno\Projet_Techno\obj\Debug\Projet_Techno.pdb
