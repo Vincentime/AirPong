@@ -12,6 +12,8 @@ namespace Projet_Techno
 {
     public partial class Form1 : Form
     {
+       
+
         delegate void SetTextCallback(string text);
 
         public Form1()
@@ -66,13 +68,35 @@ namespace Projet_Techno
             // Get Data from the sender
             string indata = sp.ReadLine();
 
-           this.BeginInvoke(new SetTextCallback(SetText),indata);
+           this.BeginInvoke(new SetTextCallback(SetText), indata);
         }
 
         private void SetText(string text)
         {
-            //this.richTextBox1.Text = text ;
-            Player1.Location = new Point(8, (int.Parse(text) - 8)*8);
+
+            /*
+                We can say that a good range from the sensor is 8-30
+                As we have a window with 500 height, we need to scale 
+                8-30 is slided to 0->22
+                0->0
+                22->500-70 = 430
+                So the transformation is -8 then *(430/22) = 19.5 
+           
+    */
+
+
+            int newPos;
+            bool r;
+            bool sucess = int.TryParse(text, out newPos);
+            newPos -= 8;
+            newPos *= 19;
+            if (newPos >= 390)
+                newPos = 390; 
+
+            
+                Player1.Location = new Point(8, newPos);
+            
+        
         }
 
 

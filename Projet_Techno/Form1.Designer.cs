@@ -54,7 +54,6 @@
             this.label1.Size = new System.Drawing.Size(31, 13);
             this.label1.TabIndex = 4;
             this.label1.Text = "Ports";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // serialPort1
             // 
@@ -67,14 +66,13 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(0, 13);
             this.label2.TabIndex = 5;
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // Player1
             // 
             this.Player1.Location = new System.Drawing.Point(12, 173);
             this.Player1.Multiline = true;
             this.Player1.Name = "Player1";
-            this.Player1.Size = new System.Drawing.Size(10, 69);
+            this.Player1.Size = new System.Drawing.Size(10, 70);
             this.Player1.TabIndex = 8;
             // 
             // textBox1
@@ -98,7 +96,6 @@
             this.Controls.Add(this.comboBox1);
             this.Name = "Form1";
             this.Text = "IR Ultimate Communicator";
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
