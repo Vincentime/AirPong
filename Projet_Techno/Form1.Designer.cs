@@ -37,12 +37,13 @@
             this.Player2 = new System.Windows.Forms.TextBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.Ball = new System.Windows.Forms.TextBox();
+            this.title = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(467, 56);
+            this.comboBox1.Location = new System.Drawing.Point(397, 64);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(140, 21);
             this.comboBox1.TabIndex = 3;
@@ -100,12 +101,24 @@
             this.Ball.Size = new System.Drawing.Size(15, 15);
             this.Ball.TabIndex = 10;
             // 
+            // title
+            // 
+            this.title.AutoSize = true;
+            this.title.Font = new System.Drawing.Font("Courier New", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.title.ForeColor = System.Drawing.SystemColors.Control;
+            this.title.Location = new System.Drawing.Point(399, 113);
+            this.title.Name = "title";
+            this.title.Size = new System.Drawing.Size(134, 33);
+            this.title.TabIndex = 11;
+            this.title.Text = "AirPong";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ClientSize = new System.Drawing.Size(884, 461);
+            this.Controls.Add(this.title);
             this.Controls.Add(this.Ball);
             this.Controls.Add(this.Player2);
             this.Controls.Add(this.Player1);
@@ -128,6 +141,7 @@
         private System.Windows.Forms.TextBox Player2;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.TextBox Ball;
+        private System.Windows.Forms.Label title;
     }
 }
 

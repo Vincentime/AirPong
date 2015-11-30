@@ -8,6 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 using System.IO.Ports;
 using System.Collections;
+using System.Drawing.Text;
 
 namespace Projet_Techno
 {
@@ -28,6 +29,11 @@ namespace Projet_Techno
             InitializeComponent();
 
             TextBox currentPlayer = Player1;
+
+            PrivateFontCollection pfc = new PrivateFontCollection();
+            pfc.AddFontFile("upheavtt.ttf");
+
+
 
             // Init Ports
             string[] PortsArray = null;
@@ -119,6 +125,7 @@ namespace Projet_Techno
                 currentPlayer = Player2;
                 offset = 860;
             }
+
             try
             {
                 int average = (int)indataArray.Average();
@@ -151,19 +158,20 @@ namespace Projet_Techno
             {
                 ballXinc *= -1;
                 whoSturn = !whoSturn;
+                serialPort1.Write("0");
             }
 
             if (Ball.Location.X >= Player2.Location.X && Ball.Location.Y >= Player2.Location.Y && Ball.Location.Y <= (Player2.Location.Y + Player2.Height))
             {
                 ballXinc *= -1;
                 whoSturn = !whoSturn;
+                serialPort1.Write("1");
             }
 
 
 
         }
 
-
-      
+   
     }
 }
