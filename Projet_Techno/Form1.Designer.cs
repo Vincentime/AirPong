@@ -34,14 +34,15 @@
             this.serialPort1 = new System.IO.Ports.SerialPort(this.components);
             this.label2 = new System.Windows.Forms.Label();
             this.Player1 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.Player2 = new System.Windows.Forms.TextBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.Ball = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(429, 12);
+            this.comboBox1.Location = new System.Drawing.Point(467, 56);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(140, 21);
             this.comboBox1.TabIndex = 3;
@@ -58,6 +59,7 @@
             // 
             // serialPort1
             // 
+            this.serialPort1.BaudRate = 4800;
             this.serialPort1.PortName = "COM2";
             // 
             // label2
@@ -70,25 +72,33 @@
             // 
             // Player1
             // 
-            this.Player1.Location = new System.Drawing.Point(12, 173);
+            this.Player1.Location = new System.Drawing.Point(10, 173);
             this.Player1.Multiline = true;
             this.Player1.Name = "Player1";
             this.Player1.Size = new System.Drawing.Size(10, 70);
             this.Player1.TabIndex = 8;
             // 
-            // textBox1
+            // Player2
             // 
-            this.textBox1.Location = new System.Drawing.Point(862, 173);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(10, 69);
-            this.textBox1.TabIndex = 9;
+            this.Player2.Location = new System.Drawing.Point(860, 173);
+            this.Player2.Multiline = true;
+            this.Player2.Name = "Player2";
+            this.Player2.Size = new System.Drawing.Size(10, 69);
+            this.Player2.TabIndex = 9;
             // 
             // timer1
             // 
             this.timer1.Enabled = true;
-            this.timer1.Interval = 10;
+            this.timer1.Interval = 20;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // Ball
+            // 
+            this.Ball.Location = new System.Drawing.Point(500, 200);
+            this.Ball.Multiline = true;
+            this.Ball.Name = "Ball";
+            this.Ball.Size = new System.Drawing.Size(15, 15);
+            this.Ball.TabIndex = 10;
             // 
             // Form1
             // 
@@ -96,7 +106,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ClientSize = new System.Drawing.Size(884, 461);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.Ball);
+            this.Controls.Add(this.Player2);
             this.Controls.Add(this.Player1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -114,8 +125,9 @@
         private System.IO.Ports.SerialPort serialPort1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox Player1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox Player2;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.TextBox Ball;
     }
 }
 
