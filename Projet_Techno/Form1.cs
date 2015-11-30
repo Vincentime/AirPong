@@ -120,17 +120,21 @@ namespace Projet_Techno
             // Get the sender
             SerialPort sp = (SerialPort)sender;
             // Get Data from the sender
-            string indata = sp.ReadExisting();
+            string indata = sp.ReadLine();
 
-          // Byte[] b = BitConverter.GetBytes(indata);
+            // Byte[] b = BitConverter.GetBytes(indata);
 
-            Console.Write(indata); // Debug           
-            this.BeginInvoke(new SetTextCallback(SetText),indata);
+            //Console.Write(indata); // Debug   
+           // Random r = new Random();
+               
+           // if (r.Next(1, 10) == 1)     
+                this.BeginInvoke(new SetTextCallback(SetText),indata);
         }
 
         private void SetText(string text)
         {
             this.richTextBox1.Text = text ;
+            Player1.Location = new Point(8, (int.Parse(text) - 8)*8);
         }
 
         private void label2_Click(object sender, EventArgs e)

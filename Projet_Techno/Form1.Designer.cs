@@ -38,14 +38,15 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
+            this.Player1 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // richTextBox1
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(12, 12);
+            this.richTextBox1.Location = new System.Drawing.Point(133, 12);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.ReadOnly = true;
-            this.richTextBox1.Size = new System.Drawing.Size(483, 296);
+            this.richTextBox1.Size = new System.Drawing.Size(362, 296);
             this.richTextBox1.TabIndex = 0;
             this.richTextBox1.Text = "";
             this.richTextBox1.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
@@ -53,10 +54,10 @@
             // textBox1
             // 
             this.textBox1.AcceptsReturn = true;
-            this.textBox1.Location = new System.Drawing.Point(12, 314);
+            this.textBox1.Location = new System.Drawing.Point(133, 314);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(483, 30);
+            this.textBox1.Size = new System.Drawing.Size(362, 30);
             this.textBox1.TabIndex = 1;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
@@ -121,12 +122,21 @@
             this.progressBar1.Size = new System.Drawing.Size(140, 23);
             this.progressBar1.TabIndex = 7;
             // 
+            // Player1
+            // 
+            this.Player1.Location = new System.Drawing.Point(12, 9);
+            this.Player1.Multiline = true;
+            this.Player1.Name = "Player1";
+            this.Player1.Size = new System.Drawing.Size(10, 69);
+            this.Player1.TabIndex = 8;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Projet_Techno.Properties.Resources.galaxy2;
             this.ClientSize = new System.Drawing.Size(657, 356);
+            this.Controls.Add(this.Player1);
             this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.label2);
@@ -154,6 +164,7 @@
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ProgressBar progressBar1;
+        private System.Windows.Forms.TextBox Player1;
     }
 }
 
