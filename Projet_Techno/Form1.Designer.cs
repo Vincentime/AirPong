@@ -35,6 +35,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.Player1 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // comboBox1
@@ -83,6 +84,12 @@
             this.textBox1.Size = new System.Drawing.Size(10, 69);
             this.textBox1.TabIndex = 9;
             // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 10;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -108,6 +115,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox Player1;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Timer timer1;
     }
 }
 

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using System.IO.Ports;
+using System.Collections;
 
 namespace Projet_Techno
 {
@@ -15,11 +16,15 @@ namespace Projet_Techno
        
 
         delegate void SetTextCallback(string text);
+        public List<int> indataArray = new List<int>();
+        int goal = 0;
+
 
         public Form1()
         {
    
             InitializeComponent();
+
             // Init Ports
             string[] PortsArray = null;
             int i = 0;
@@ -57,7 +62,7 @@ namespace Projet_Techno
                 
                 serialPort1.PortName = lastPort;
                 Console.Write(serialPort1.PortName); // Debug
-                serialPort1.Open();
+               // serialPort1.Open();
             }
         }
 
@@ -86,19 +91,34 @@ namespace Projet_Techno
 
 
             int newPos;
-            bool r;
+           
             bool sucess = int.TryParse(text, out newPos);
             newPos -= 8;
             newPos *= 19;
             if (newPos >= 390)
-                newPos = 390; 
+                newPos = 390;
 
-            
-                Player1.Location = new Point(8, newPos);
-            
+            indataArray.Add(newPos); 
         
         }
 
+        private void timer1_Tick(object sender, EventArgs e)
+        {
 
+            try {
+                int average = (int)indataArray.Average();
+               
+                //This line below allows to have a smooth move
+                Player1.Location = new Point(8, Player1.Location.Y + (average - Player1.Location.Y)/4  );
+                indataArray.Clear();
+            }
+            catch(Exception ex)
+            {
+                Console.WriteLine("Aie");
+            }
+        }
+
+
+      
     }
 }
